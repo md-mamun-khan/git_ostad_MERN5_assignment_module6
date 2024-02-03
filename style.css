@@ -1,0 +1,25 @@
+.full-width-banner {
+        background-image: url('./img/Banner.png');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        box-shadow: 10px;
+}
+
+.fixed-height {
+    height: 300px; 
+}
+
+.fixed-width {
+    width: 300px; 
+}
+
+/* .card my-card{
+    display: none;
+} */

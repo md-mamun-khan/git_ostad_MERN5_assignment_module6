@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Assignment Module - 06 </title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-light">
+
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-sm fixed-top p-0" style="background-color: #043957;" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand"> MMK </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-lg-auto">
+                    <li class="nav-item active"> <a class="nav-link" href="#"> HOME </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> ABOUT </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> CONTACT </a> </li>
+                </ul>
+
+            </div>
+            <button class="btn btn-outline-primary" type="submit">Sign In</button>
+        </div>
+    </nav>
+
+
+    <!-- Banner -->
+
+    <div class="container-fluid full-width-banner">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 fixed-width">
+                <div class="card my-card fixed-height">
+                    <div class="card-body">
+                        <label for="ageInput" class="form-label">How old are you? Enter here</label>
+                        <input type="number" id="ageInput" class="form-control" placeholder="Enter age">
+
+
+                        <button class="btn btn-primary mt-2 w-100" id="agecheckbutton">Check
+                            Age</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 fixed-width">
+                <div class="card my-card fixed-height text-center" style="display: none;" id="resultCardAdult">
+                    <div class="card-body">
+                        <p class="card-text text-bg-primary" id="resultText"> You are adult </p>
+                        <img class="card-img-top img-fluid" src="./img/Adult.jpg" />
+                    </div>
+                </div>
+                <div class="card my-card fixed-height text-center" style="display: none;" id="resultCardChild">
+                    <div class="card-body">
+                        <p class="card-text text-bg-success" id="resultText"> You are Child </p>
+                        <img class="card-img-top img-fluid" src="./img/Child.avif" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+
+        let agecheckbutton = document.getElementById('agecheckbutton');
+        let resultCardAdult = document.getElementById('resultCardAdult');
+        let resultCardChild = document.getElementById('resultCardChild');
+
+
+        agecheckbutton.addEventListener("click", function () {
+
+            let givenAge = parseInt(document.getElementById('ageInput').value);
+
+            if (givenAge >= 18) {
+                resultCardAdult.style.display = 'block';
+                resultCardChild.style.display = 'none';
+            } else {
+                resultCardChild.style.display = 'block';
+                resultCardAdult.style.display = 'none';
+            }
+
+
+
+        }
+        )
+
+    </script>
+
+
+
+
+    <!--footer-->
+    <div class="container-fluid bg-white shadow" style="margin-top: 10px;">
+        <div class="row p-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <h5> Follow me </h5>
+                <a class="m-0" href="#">Facebook</a> <br />
+                <a class="m-0" href="#">Youtube</a>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <h5> Address </h5>
+                <p class="m-0"> Gazipur, Bangladesh </p>
+                <p class="m-0"> +8801671424121 (Help line) </p>
+                <p class="m-0"> engmamun_khan@hotmail.com </p>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <h5 class="m-0"> Information </h5>
+                <a class="m-0" href="#"> About me </a>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <h5> Legal </h5>
+                <a class="m-0" href="#">Refund Policy</a> <br />
+                <a class="m-0" href="#">Terms & Condition</a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./bootstrap.bundle.js"></script>
+</body>
+
+</html>
